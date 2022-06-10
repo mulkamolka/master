@@ -7,6 +7,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,11 +15,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
-import com.example.javaserver.service.ApiService;
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonArrayFormatVisitor;
+import com.example.javaserver.service.ApiSeoul;
+import com.example.javaserver.service.ApiWholesale;
 
 @CrossOrigin
 @RestController
@@ -26,27 +24,29 @@ import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonArrayFormatVisitor;
 public class APIController {
 
     @Autowired
-    ApiService apiService;
+    ApiWholesale apiWholesale;
+    @Autowired
+    ApiSeoul apiSeoul;
 
     // 도,소매 가격 - 채소 200
     @GetMapping("/vegprices")
-    public void vegAPI() {
-        apiService.wholeSalePricesVeg();
+    public ArrayList vegAPI() {
+
+        return  apiWholesale.wholeSalePricesVeg();
     }
 
     // 도,소매 가격 - 축산물 500
     @GetMapping("/meatprices")
-    public void meatAPI(){
-        apiService.wholeSalePricesMeat();
+    public ArrayList meatAPI(){
+        return  apiWholesale.wholeSalePricesMeat();
     }
 
-    // 도,소매 가격 - 수산물 
+    // 도,소매 가격 - 수산물 600
     @GetMapping("/seaprices")
-    public void seaAPI(){
-        apiService.wholeSalePricesSea();
+    public ArrayList seaAPI(){
+       return apiWholesale.wholeSalePricesSea();
     }
 
-    
     @RequestMapping(value = "netPost")
     public void netPost() {
         try {
