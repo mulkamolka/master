@@ -40,7 +40,7 @@ public class ApiSeoulImple implements ApiSeoul {
             while ((output = br.readLine()) != null) {
                 System.out.println(output);
                 returnVeg.add(output);
-            }
+            } 
             conn.disconnect();
         } catch (MalformedURLException e) {
             e.toString();
