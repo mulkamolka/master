@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Service;
 
 import com.example.javaserver.service.ApiSeoul;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 
 @Service
 public class ApiSeoulImple implements ApiSeoul {
@@ -23,7 +24,7 @@ public class ApiSeoulImple implements ApiSeoul {
         try {
 
             URL url = new URL(
-                    "https://www.kamis.or.kr/service/price/xml.do?action=dailyPriceByCategoryList&p_product_cls_code=02&p_country_code=1101&p_regday=2022-06-02&p_convert_kg_yn=N&p_item_category_code=200&p_cert_key=f08f57bd-4699-4da7-a29f-1f6fa6c1692d&p_cert_id=2535&p_returntype=json");
+                    "http://openapi.seoul.go.kr:8088/4c63564f71726c6136384147526f4d/json/ListNecessariesPricesService/1/5/");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/json");
@@ -46,8 +47,10 @@ public class ApiSeoulImple implements ApiSeoul {
         } catch (IOException e) {
             e.toString();
         }
-        System.out.println(returnVeg);
+        System.out.println(returnVeg.toArray().getClass());
 
+        // 데이터 파싱
+        
         return returnVeg;
 
     };

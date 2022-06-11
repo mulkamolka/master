@@ -9,12 +9,10 @@ public interface ApiWholesale {
 
     // 도, 소매 물가
 
-
     ArrayList wholeSalePricesVeg();
 
     ArrayList wholeSalePricesMeat();
 
     ArrayList wholeSalePricesSea();
-
 
 }

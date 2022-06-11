@@ -28,23 +28,28 @@ public class APIController {
     @Autowired
     ApiSeoul apiSeoul;
 
+    // 서울 가격
+    @GetMapping("/1")
+    public ArrayList seoul() {
+        return apiSeoul.seoulMarketVeg();
+    }
+
     // 도,소매 가격 - 채소 200
     @GetMapping("/vegprices")
     public ArrayList vegAPI() {
-
-        return  apiWholesale.wholeSalePricesVeg();
+        return apiWholesale.wholeSalePricesVeg();
     }
 
     // 도,소매 가격 - 축산물 500
     @GetMapping("/meatprices")
-    public ArrayList meatAPI(){
-        return  apiWholesale.wholeSalePricesMeat();
+    public ArrayList meatAPI() {
+        return apiWholesale.wholeSalePricesMeat();
     }
 
     // 도,소매 가격 - 수산물 600
     @GetMapping("/seaprices")
-    public ArrayList seaAPI(){
-       return apiWholesale.wholeSalePricesSea();
+    public ArrayList seaAPI() {
+        return apiWholesale.wholeSalePricesSea();
     }
 
     @RequestMapping(value = "netPost")

@@ -11,10 +11,10 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Service;
 
 import com.example.javaserver.service.ApiWholesale;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 
 @Service
 public class ApiWholsaleImpl implements ApiWholesale{
-
 
     @Override
     public ArrayList wholeSalePricesVeg() {
@@ -43,8 +43,13 @@ public class ApiWholsaleImpl implements ApiWholesale{
             while ((output = br.readLine()) != null) {
                 System.out.println(output);
                 returnList.add(output);
-
             }
+
+            // Array => json 변환 과정 필요
+            // JSONPObject json = new JSONPObject(function, value)
+
+
+
             conn.disconnect();
         } catch (MalformedURLException e) {
             e.toString();

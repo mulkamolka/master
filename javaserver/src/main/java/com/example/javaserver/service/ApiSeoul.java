@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public interface ApiSeoul {
 
     // 서울 마켓 가격
-    
+
     ArrayList seoulMarketMeat();
 
     ArrayList seoulMarketVeg();
@@ -16,4 +16,3 @@ public interface ApiSeoul {
     ArrayList seoulMarketSea();
     
 }
-
