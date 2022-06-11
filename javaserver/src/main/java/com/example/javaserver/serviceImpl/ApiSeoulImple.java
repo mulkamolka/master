@@ -51,6 +51,7 @@ public class ApiSeoulImple implements ApiSeoul {
 
         // 데이터 파싱
         
+        
         return returnVeg;
 
     };
