@@ -22,7 +22,7 @@ import com.example.javaserver.service.ApiWholesale;
 @RestController
 @RequestMapping("/api")
 public class APIController {
-
+    
     @Autowired
     ApiWholesale apiWholesale;
     @Autowired
