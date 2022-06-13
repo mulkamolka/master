@@ -40,7 +40,7 @@ public class APIController {
         return apiWholesale.wholeSalePricesVeg();
     }
 
-    // 도,소매 가격 - 축산물 500
+    // 도,소매 가격 - ''
     @GetMapping("/meatprices")
     public ArrayList meatAPI() {
         return apiWholesale.wholeSalePricesMeat();
@@ -52,6 +52,7 @@ public class APIController {
         return apiWholesale.wholeSalePricesSea();
     }
 
+    // post code 
     @RequestMapping(value = "netPost")
     public void netPost() {
         try {
@@ -85,6 +86,7 @@ public class APIController {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+            
         }
 
     }
