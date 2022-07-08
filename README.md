@@ -26,6 +26,6 @@
 
 | 기능 코드 | 주제 | 담당자 |
 |:----:| :-----------:|:-----:|
-| [D1]() | 소매 물가 데이터 API 전처리 | [이상훈](https://github.com/ithingv), [지영우]((https://github.com/Angwoo-the-Fuego) |
+| [D1]() | 소매 물가 데이터 API 전처리 | [이상훈](https://github.com/ithingv), [지영우](https://github.com/Angwoo-the-Fuego) |
 | [D2]() | 도매 물가 데이터 API 전처리 | [지영우](https://github.com/Angwoo-the-Fuego), [지영우](https://github.com/ithingv) |
 
