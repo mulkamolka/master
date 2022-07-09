@@ -10,11 +10,10 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Service;
 
-import com.example.javaserver.service.ApiSeoul;
-import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.example.javaserver.service.ApiSeoulService;
 
 @Service
-public class ApiSeoulImple implements ApiSeoul {
+public class ApiSeoulImple implements ApiSeoulService {
 
     @Override
     public ArrayList seoulMarketVeg() {

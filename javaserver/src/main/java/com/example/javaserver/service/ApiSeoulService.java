@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface ApiSeoul {
+public interface ApiSeoulService {
 
     // 서울 마켓 가격
 
@@ -15,5 +15,5 @@ public interface ApiSeoul {
 
     ArrayList seoulMarketSea();
     
-    // 
+    // test
 }
